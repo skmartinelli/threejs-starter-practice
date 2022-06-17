@@ -18,12 +18,13 @@ const boxMesh = new THREE.Mesh(geometry,material)
 const sphereMesh = new THREE.Mesh(geometry2,material)
 scene.add(boxMesh)
 
-const geometry3 = new THREE.TorusGeometry(10, 3, 16, 100);
+// add donut
+const geometry3 = new THREE.TorusGeometry(8, 3, 16, 100);
 const material3 = new THREE.MeshStandardMaterial({ color: 0xff6347 });
 const torus = new THREE.Mesh(geometry3, material3);
 scene.add(torus);
 
-
+torus.position.x = 0.5;
 
 
 // scene.add(sphereMesh)
