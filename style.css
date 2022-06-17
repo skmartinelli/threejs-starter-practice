@@ -1,3 +1,9 @@
+canvas {
+    position: fixed;
+    top:0;
+    left:0;
+}
+/* Rajat CSS */
 *{
     margin: 0px;
     padding: 0px;
