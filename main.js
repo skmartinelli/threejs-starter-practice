@@ -58,21 +58,22 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-// Background
+// ! Background
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
-scene.background = spaceTexture;
+// ! const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+// ! scene.background = spaceTexture;
 
 // Avatar
-
+/*
 const jeffTexture = new THREE.TextureLoader().load('jeff.png');
 
 const jeff = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: jeffTexture }));
 
 scene.add(jeff);
-
+*/
 // Moon
 
+/*
 const moonTexture = new THREE.TextureLoader().load('moon.jpg');
 const normalTexture = new THREE.TextureLoader().load('normal.jpg');
 
@@ -92,10 +93,12 @@ moon.position.setX(-10);
 jeff.position.z = -5;
 jeff.position.x = 2;
 
+*/
 // Scroll Animation
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
+  /*
   moon.rotation.x += 0.05;
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
@@ -103,6 +106,7 @@ function moveCamera() {
   jeff.rotation.y += 0.01;
   jeff.rotation.z += 0.01;
 
+  */
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
   camera.rotation.y = t * -0.0002;
@@ -120,7 +124,7 @@ function animate() {
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
 
-  moon.rotation.x += 0.005;
+  // moon.rotation.x += 0.005;
 
   // controls.update();
 
